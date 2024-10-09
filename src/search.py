@@ -6,6 +6,7 @@ import matplotlib
 matplotlib.use('TkAgg')  # Define um backend interativo
 import matplotlib.pyplot as plt
 from PIL import Image
+from models import FashionClipModel  # Importa a classe de outro arquivo
 
 
 embeddings_path = '/home/baldoqui/ssd/roupas/embeddings_bal.pkl'
@@ -19,7 +20,6 @@ print("Tipo do conteúdo:", type(loaded_embeddings))
 image_dir = '../roupas/images2/'
 
 embedding_values = np.array(list(loaded_embeddings.values()))
-embedding_values = embedding_values.reshape(embedding_values.shape[0],768)
 
 image_files = list(loaded_embeddings.keys())
 
@@ -78,6 +78,6 @@ def display_similar_images(similar_images):
     plt.show()
 
 # Buscar as imagens mais similares e exibi-las
-similar_images = search_similar_images(embedding_values[1], k=5)
+similar_images = search_similar_images(embedding_values[126], k=5)
 print(similar_images)
 display_similar_images(similar_images)

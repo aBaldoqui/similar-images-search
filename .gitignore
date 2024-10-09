@@ -2,3 +2,6 @@ images/*
 images2/*
 venv/*
 labels/*
+*.zip
+*.pkl
+__pycache__

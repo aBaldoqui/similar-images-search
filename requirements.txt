@@ -1,0 +1,9 @@
+transformers==4.45.2
+numpy==2.1.2
+Pillow==10.4.0
+torch==2.4.1
+torchvision==0.19.1
+faiss-cpu==1.9.0
+matplotlib==3.9.2
+ftfy==6.2.3
+open_clip_torch==2.26.1
